@@ -45,7 +45,7 @@ public class Main {
         }
     }
 
-    public static class SingleLinkList<T> implements Iterable<T> {
+    public static class SingleLinkList<T> implements Iterable<T> { //Класс списка
 
         ListItem<T> head;
         ListItem<T> tail;
@@ -78,8 +78,8 @@ public class Main {
             return head == null;
         }
 
-        public void addToEnd(T item) {
-            ListItem<T> newItem = new ListItem<>();
+        public void addToEnd(T item) {  //Метод заполнения списка
+            ListItem<T> newItem = new ListItem<>(); //Выделение памяти
             newItem.data = item;
             if (isEmpty()) {
                 head = newItem;
@@ -90,7 +90,7 @@ public class Main {
             }
         }
 
-        public void reverse() {
+        public void reverse() {//Метод разворота списка
             if (!isEmpty() && head.next != null) {
                 tail = head;
                 ListItem<T> current = head.next;
